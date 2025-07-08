@@ -112,7 +112,7 @@ class _UserListScreenState extends State<UserListScreen> {
                   ),
                   elevation: 2,
                   child: ListTile(
-                    contentPadding: const EdgeInsets.all(16),
+                    contentPadding: const EdgeInsets.all(8),
                     title: Text(
                       user.name,
                       style: const TextStyle(
@@ -133,8 +133,8 @@ class _UserListScreenState extends State<UserListScreen> {
                       Navigator.push(
                         context,
                         PageRouteBuilder(
-                          //ATRASO para o CICULAR PROGRESS INDICATOR
-                          transitionDuration: const Duration(milliseconds: 500),
+                          //ATRASO bonito
+                          transitionDuration: const Duration(milliseconds: 350),
                           pageBuilder:
                               (context, animation, secondaryAnimation) =>
                                   UserDetailScreen(user: user),
