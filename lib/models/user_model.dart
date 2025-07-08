@@ -1,5 +1,5 @@
 import 'package:teste_tecnico_cronos/models/address_model.dart';
-import 'package:teste_tecnico_cronos/models/company_model.dart';
+
 
 class UserModel {
   final int id;
@@ -9,7 +9,6 @@ class UserModel {
   final AddressModel address;
   final String phone;
   final String website;
-  final CompanyModel company;
 
   const UserModel({
     required this.id,
@@ -19,7 +18,6 @@ class UserModel {
     required this.address,
     required this.phone,
     required this.website,
-    required this.company,
   });
 
   factory UserModel.fromJson(Map<String, dynamic> json) {
@@ -31,7 +29,6 @@ class UserModel {
       address: AddressModel.fromJson(json['address'] as Map<String, dynamic>),
       phone: json['phone'] as String,
       website: json['website'] as String,
-      company: CompanyModel.fromJson(json['company'] as Map<String, dynamic>),
     );
   }
 }

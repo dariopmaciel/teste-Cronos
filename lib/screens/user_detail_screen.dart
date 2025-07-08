@@ -13,7 +13,8 @@ class UserDetailScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: SingleChildScrollView(
-          // Permite rolagem se o conteúdo for muito grande
+          // Permite rolagem se o conteúdo 
+          //Ou list se for muito grande
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

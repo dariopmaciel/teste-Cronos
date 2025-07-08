@@ -21,7 +21,7 @@ class _UserListScreenState extends State<UserListScreen> {
   void initState() {
     super.initState();
     // _findUsers();
-    Future.delayed(const Duration(milliseconds: 3000), () {
+    Future.delayed(const Duration(milliseconds: 2000), () {
       _findUsers();
     });
   }
@@ -64,10 +64,10 @@ class _UserListScreenState extends State<UserListScreen> {
         future: _usersFuture,
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
-            // Indicador de carregamento
+            // cpi carregamento
             return const Center(child: CircularProgressIndicator());
           } else if (_errorMessage != null) {
-            // Exibe mensagem de erro amigável
+            // mensagem de erro amigável
             return Center(
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
